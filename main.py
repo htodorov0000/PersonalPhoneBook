@@ -1,6 +1,11 @@
 from database_manager import DatabaseManager
 import re
 
+#TODO:
+#1. Fix crash when empty database
+#2. Add docstrings
+#3. Make tests
+
 database_manager = DatabaseManager()
 
 current_page: int = 0
