@@ -42,7 +42,7 @@ def records_menu(page_num: int, records: list) -> str:
     print("===RECORDS===")
     print()
     print()
-    print("""   NAME    PHONE NUMBER    EMAIL   NOTES""")
+    print("""   NAME       PHONE NUMBER        EMAIL         NOTES""")
     print_entries_menu(page_num, records)
     print('Commands: "SEARCH", "SORT", "NEW"')
     return(input())
@@ -50,6 +50,7 @@ def records_menu(page_num: int, records: list) -> str:
 def search_menu(records: list):
     entries_list: list = []
     while True:
+        records = database_manager.get_all_records()
         print("===SEARCH===")
         print()
         user_input = input("Search for the desired contact's name: ")
